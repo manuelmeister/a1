@@ -35,20 +35,20 @@ function createContainer(
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "Diskrete Mathematik",
-    base: "/dm/",
+    title: "Analysis 1",
+    base: "/a1/",
     description: "Interactive script",
-    lang: "en-US",
+    lang: "de-CH",
     srcDir: 'docs',
     head: [
-        ['meta', { property: 'og:url', content: 'https://manuelmeister.github.io/dm/' }],
+        ['meta', { property: 'og:url', content: 'https://manuelmeister.github.io/a1/' }],
         ['meta', { property: 'og:type', content: 'website' }],
-        ['meta', { property: 'og:title', content: 'Diskrete Mathematik' }],
-        ['meta', { property: 'og:description', content: 'Skript von Ueli Maurer, digitalisiert von Studierenden' }],
-        ['meta', { property: 'og:image', content: 'https://manuelmeister.github.io/dm/social.png'}],
+        ['meta', { property: 'og:title', content: 'Analyis 1 Script' }],
+        ['meta', { property: 'og:description', content: 'Skript von Marc Burger digitalisiert von Studierenden' }],
+        ['meta', { property: 'og:image', content: 'https://manuelmeister.github.io/a1/social.png'}],
     ],
     sitemap: {
-        hostname: 'https://manuelmeister.github.io/dm/',
+        hostname: 'https://manuelmeister.github.io/a1/',
         transformItems: (items) => {
             return items.map((item) => {
                 if (item.url.endsWith('/')) {
@@ -116,16 +116,16 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: 'Refs', link: '/refs'},
-            {
-                text: 'Chapters', items: [
-                    {text: '2. Reasoning & Proofs', link: '/2-reasoning-proofs'},
-                    {text: '3. Sets, Relations and Functions', link: '/3-sets-relations-functions'},
-                    {text: '4. Number Theory', link: '/4-number-theory'},
-                    {text: '5. Algebra', link: '/5-algebra'},
-                    {text: '6. Logic', link: '/6-logic'},
-                ]
-            }
+            //{text: 'Refs', link: '/refs'},
+            //{
+            //    text: 'Chapters', items: [
+            //        {text: '2. Reasoning & Proofs', link: '/2-reasoning-proofs'},
+            //        {text: '3. Sets, Relations and Functions', link: '/3-sets-relations-functions'},
+            //        {text: '4. Number Theory', link: '/4-number-theory'},
+            //        {text: '5. Algebra', link: '/5-algebra'},
+            //        {text: '6. Logic', link: '/6-logic'},
+            //    ]
+            //}
         ],
 
         search: {
@@ -154,14 +154,14 @@ export default defineConfig({
             prev: "Previous chapter",
         },
         editLink: {
-            pattern: 'https://github.com/manuelmeister/dm/edit/main/docs/:path'
+            pattern: 'https://github.com/manuelmeister/a1/edit/main/docs/:path'
         },
 
 
         sidebar: false,
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/manuelmeister/dm'}
+            {icon: 'github', link: 'https://github.com/manuelmeister/a1'}
         ]
     },
     vue: {

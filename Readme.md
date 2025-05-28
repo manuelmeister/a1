@@ -1,13 +1,13 @@
-# Discrete Mathematics
+# Analysis 1
 
-Welcome to the **Interactive Discrete Mathematics Script**! 🎓 This script is designed to provide students with an interactive and accessible platform to learn and explore the core concepts of discrete mathematics.
+Welcome to the **Interactive Analysis 1 Script**! 🎓 This script is designed to provide students with an interactive and accessible platform to learn and explore the core concepts of analysis & calculus.
 
 ## 🌟 Features
 
 - **LaTeX Support:** Integrated MathJax support for beautiful mathematical formula rendering, with built-in fallbacks for screen readers.
 - **Footnotes:** Elegant footnotes powered by `markdown-it-footnote`.
 - **Modular Design:** Content is modular and easy to adapt.
-- **Navigation:** Intuitive navigation across various chapters of discrete mathematics.
+- **Navigation:** Intuitive navigation across various chapters of the analysis script.
 - **Accessibility:** Enhanced rendering and fallback options for LaTeX formulas.
 
 ---
@@ -18,7 +18,7 @@ If you'd like to develop or customize this script locally, follow these steps:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/manuelmeister/dm
+git clone https://github.com/manuelmeister/a1
 cd dm
 ```
 
@@ -60,5 +60,5 @@ This script leverages the following tools and libraries:
 
 ## ⚠️ Disclaimer
 
-The content is provided as-is, with no guarantees for correctness or completeness. Use it at your own risk. All rights remain with Ueli Maurer and the respective authors.
+The content is provided as-is, with no guarantees for correctness or completeness. Use it at your own risk. All rights remain with Marc Burger and the respective authors.
 

@@ -1,10 +1,9 @@
 ---
 layout: home
 hero:
-  name: Diskrete Mathematik
-  text: Skript 2024
-  tagline: "von Ueli Maurer, digitalisiert von Studierenden"
-  image: https://crypto.ethz.ch/~maurer/me.jpg
+  name: Analysis 1
+  text: Skript 2025
+  tagline: "von Marc Burger, feat. Özlem Imamoglu, digitalisiert von Studierenden"
   actions:
     - theme: brand
       text: Introduction
@@ -13,29 +12,19 @@ hero:
       text: Get Started
       link: /2-reasoning-proofs
 features:
-  - icon: 🎯
-    title: Chapter 1
-    details: Introduction and Motivation
-    link: intro
-  - icon: 🔮
-    title: Chapter 2
-    details: Mathematical Reasoning, Proofs, and a First Approach to Logic
-    link: 2-reasoning-proofs
-  - icon: "{}"
-    title: Chapter 3
-    details: Sets, Relations, and Functions
-    link: 3-sets-relations-functions
-  - icon: 🔢
-    title: Chapter 4
-    details: Number Theory
-    link: 4-number-theory
-  - icon: 🧮
-    title: Chapter 5
-    details: Algebra
-    link: 5-algebra
-    target: _self
-  - icon: 🧠
-    title: Chapter 6
-    details: Logic
-    link: 6-logic
+  - icon: ℝ
+    title: Kapitel 1
+    details: Reele Zahlen, Euklidische Räume, Komplexe Zahlen
+  - icon: (aₙ)
+    title: Kapitel 2
+    details: Folgen und Reihen
+  - icon: 〜
+    title: Kapitel 3
+    details: Stetige Funktionen
+  - icon: 𝑓'
+    title: Kapitel 4
+    details: Differenzierbare Funktionen
+  - icon: ∫
+    title: Kapitel 5
+    details: Das Riemann-Integral
 ---
