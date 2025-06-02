@@ -15,6 +15,7 @@ features:
   - icon: ℝ
     title: Kapitel 1
     details: Reele Zahlen, Euklidische Räume, Komplexe Zahlen
+    link: /1-reelle-komplexe-zahlen
   - icon: (aₙ)
     title: Kapitel 2
     details: Folgen und Reihen
