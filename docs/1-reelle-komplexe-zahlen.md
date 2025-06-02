@@ -76,7 +76,7 @@ $$
 mit $a_i \in Q$, so dass $x = \pi$ eine Lösung ist.
 :::
 
-Wir werden später beweisen, dass $\sqrt{2}$ und $\pi$ reelle Zahlen sind; für $e$ siehe [Abschnitt 3.9](/3-stetige-funktionen).
+Wir werden später beweisen, dass $\sqrt{2}$ und $\pi$ reelle Zahlen sind; für $e$ siehe [Abschnitt 3.9](#).
 
 Die Menge $\mathbb{R}$ der reellen Zahlen entsteht durch einen Vervollständigungsprozess von $\mathbb Q$, den wir überspringen. Wir nehmen $\mathbb R$ als gegeben an und beschreiben dessen grundlegende Eigenschaften.
 
