@@ -1,7 +1,7 @@
 ---
-#next: 
-#  link: /3-sets-relations-functions
-#  text: Sets, Relations, and Functions
+next: 
+  link: /2-folgen-reihen
+  text: Folgen und Reihen
 #prev: 
 #  link: /intro
 #  text: Introduction and Motivation
