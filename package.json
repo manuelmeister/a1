@@ -2,7 +2,8 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:debug": "node --inspect ./node_modules/vitepress/dist/node/cli.js dev"
   },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
@@ -10,9 +11,7 @@
     "vue": "^3.5.13"
   },
   "dependencies": {
-    "markdown-it-footnote": "^4.0.0",
     "markdown-it-container": "^4.0.0",
-    "tippy.js": "^6.3.7",
     "vite": "^6.0.3",
     "vitepress-plugin-theme-override": "^0.1.0"
   },

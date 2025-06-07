@@ -19,6 +19,7 @@ features:
   - icon: (aₙ)
     title: Kapitel 2
     details: Folgen und Reihen
+    link: /2-folgen-reihen
   - icon: 〜
     title: Kapitel 3
     details: Stetige Funktionen

@@ -228,7 +228,7 @@ $$0 \le (-y)^2 = (-y),(-y) = (-1),y,(-1),y = (-1)^2,y^2 = y^2$$
 Folgende Folgerung zeichnen wir speziell aus:
 
 ::: proposition Korollar 1.1.7. (Archimedisches Prinzip)
-Sei $x \in R$ mit $x > 0$ und $y \in R$. Dann gibt es $n \in N$ mit $y < n x$.
+Sei $x \in ℝ$ mit $x > 0$ und $y \in ℝ$. Dann gibt es $n \in ℕ$ mit $y < n x$.
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
 
@@ -252,7 +252,7 @@ Sei $x \in R$ mit $x > 0$ und $y \in R$. Dann gibt es $n \in N$ mit $y < n x$.
 
 **Beweis:** 
 
-Sei $r = y x^{-1}$. Es bleibt zu zeigen: $\exists n \in N$ mit $r < n$.
+Sei $r = y x^{-1}$. Es bleibt zu zeigen: $\exists n \in ℕ$ mit $r < n$.
 Beweis durch Widerspruch. <br>
 Annahme: $\forall m \in ℕ$ gilt: $m \le r$. 
 
