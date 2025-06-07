@@ -1133,3 +1133,835 @@ $$
 
 (2) Jede beschränkte Folge in $\mathbb{R}^d$ hat eine konvergente Teilfolge.
 :::
+
+## 2.7. Reihen
+
+Sei $\left( a _ { n } \right) _ { n \geqslant 1 }$ eine Folge in $\mathbf { R }$ oder $\mathbf { C }$ . Der Begriff der Konvergenz der Reihe
+
+$$
+\sum _ { k = 1 } ^ { \infty } a _ { k }
+$$
+
+Stutzt sich auf die Folge $\left( S _ { n } \right) _ { n \geqslant 1 }$ der Partialsummen:
+
+$$
+S _ { n } = \sum _ { k = 1 } ^ { n } a _ { k } .
+$$
+
+DEFINITION 2.7.1. Die Reihe
+
+$\sum _ { k = 1 } ^ { \infty } a _ { k }$ ist konvergent, falls die Folge $\left( S _ { n } \right) _ { n \geqslant 1 }$ der Partialsummen konvergiert. In diesem Fall definieren wir:
+
+$$
+\sum _ { k = 1 } ^ { \infty } a _ { k } : = \operatorname* { l i m } _ { n \to \infty } S _ { n } .
+$$
+
+NoTArion. Von nun an bezeichnen wir den Absolutbetrag einer komplexen Zahl $z = x + i y$ mit $| z | = { \sqrt { x ^ { 2 } + y ^ { 2 } } }$
+
+BEIspIEL 2.7.2 (Geometrische Reihe). Sei $q \in \mathbf { C }$ mit $| q | < 1$ . Dann konvergiert $\sum _ { k = 0 } ^ { \infty } q ^ { k }$ und dessen Wert ist:
+
+$$
+\sum _ { k = 0 } ^ { \infty } q ^ { k } = \frac { 1 } { 1 - q } .
+$$
+
+Sei $S _ { n } = \sum _ { k = 0 } ^ { n } q ^ { k } = 1 + q + \cdot \cdot \cdot + q ^ { n }$
+
+$$
+q \cdot S _ { n } = q + \cdot \cdot \cdot q ^ { n } + q ^ { n + 1 }
+$$
+
+woraus
+
+$$
+( 1 - q ) S _ { n } = 1 - q ^ { n + 1 }
+$$
+
+folgt. Es gilt also:
+
+$$
+S _ { n } = { \frac { 1 - q ^ { n + 1 } } { 1 - q } } .
+$$
+
+Nun zeigen wir die Konvergenz:
+
+$$
+\left| S _ { n } - { \frac { 1 } { 1 - q } } \right| = \left| { \frac { - q ^ { n + 1 } } { 1 - q } } \right| = { \frac { | q | ^ { n + 1 } } { | 1 - q | } }
+$$
+
+Aus Beispiel 2.2.3 und $0 \leqslant | q | < 1$ folgt
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \left| S _ { n } - { \frac { 1 } { 1 - q } } \right| = \operatorname* { l i m } _ { n \to \infty } { \frac { \left| q \right| ^ { n + 1 } } { \left| 1 - q \right| } } = 0 .
+$$
+
+Somit konvergiert $\textstyle \left( S _ { n } \right) _ { n \geqslant 1 } { \mathrm { ~ g e g e n ~ } } { \frac { 1 } { 1 - q } } .$
+
+BeispiEL 2.7.3 (Harmonische Reihe). Die Reihe
+
+$$
+\sum _ { n = 1 } ^ { \infty } { \frac { 1 } { n } }
+$$
+
+divergiert. (Siehe Beispiel 1.1.17(ii))
+
+Analog zu Satz 2.1.8 fur Folgen erhalten wir:
+
+$$
+\begin{array} { r l } & { \mathrm { ~ r z ~ 2 . 7 . 4 . ~ } \operatorname { S e i e n } \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } \quad u n d \ \sum _ { j = 1 } ^ { \infty } b _ { j } \quad k o n v e r g e n t , \ s o w i e \ \alpha \in \mathbb { C } . } \\ & { \rangle \ : D a n n \ i s t \ \displaystyle \sum _ { k = 1 } ^ { \infty } ( a _ { k } + b _ { k } ) \ k o n v e r g e n t \ u n d \ \displaystyle \sum _ { k = 1 } ^ { \infty } ( a _ { k } + b _ { k } ) = \left( \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } \right) + \left( \displaystyle \sum _ { j = 1 } ^ { \infty } b _ { j } \right) . } \\ & { \Uparrow \ : D a n n \ i s t \ \displaystyle \sum _ { k = 1 } ^ { \infty } \alpha \cdot a _ { k } \quad k o n v e r g e n t \ u n d \ \displaystyle \sum _ { k = 1 } ^ { \infty } \alpha \cdot a _ { k } = \alpha \cdot \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } . } \end{array}
+$$
+
+BeweIS. (1): Seien
+
+$$
+S _ { n } : = \sum _ { k = 1 } ^ { n } a _ { k } , \qquad U _ { n } : = \sum _ { j = 1 } ^ { n } b _ { j } , \qquad W _ { n } : = \sum _ { k = 1 } ^ { n } ( a _ { k } + b _ { k } ) .
+$$
+
+Dann ist
+
+$$
+W _ { n } = S _ { n } + U _ { n }
+$$
+
+woraus nach Satz 2.1.8
+
+$$
+\operatorname* { l i m } _ { n \to \infty } W _ { n } = \operatorname* { l i m } _ { n \to \infty } S _ { n } + \operatorname* { l i m } _ { n \to \infty } U _ { n }
+$$
+
+folgt, was die erste Aussage beweist..   
+Der Beweis fur die zweite Aussage verlauft analog. Produkte von konvergierenden Reihen sind etwas schwieriger zu handhaben; wir werden Produkte im Fall von absolut konvergenten Reihen behandeln.   
+Das Cauchy Kriterium fur Konvergenz von Folgen liefert ein sehr nutzliches Kriterium fur die Konvergenz von Reihen.
+
+SATz 2.7.5 (Cauchy Kriterium). Die Reihe $\sum _ { k = 1 } ^ { \infty } a _ { k }$ ist genau dann konvergent, falls:
+
+BeWeIS. Sei $S _ { n } : = \sum _ { k = 1 } ^ { n } a _ { k }$ . Dann folgt fur $m \geqslant n$ ..
+
+$$
+S _ { m } - S _ { n - 1 } = \sum _ { k = 1 } ^ { m } a _ { k } - \sum _ { k = 1 } ^ { n - 1 } a _ { k } = \sum _ { k = n } ^ { m } a _ { k } .
+$$
+
+Der Satz folgt dann aus dem Cauchy Kriterium fur Folgen. (Satz 2.4.2)
+
+Reihen mit nichtnegativen Gliedern sind speziell einfach zu behandeln; auch spielen sie in der Theorie absolut konvergenter Reihen eine wichtige Rolle, deshalb behandeln wir sie zuerst.
+
+Folgender Satz ist eine einfache Anwendung des Satzes von Weierstrass:
+
+$$
+\begin{array} { c } { { { \mathrm { S A T Z ~ 2 . 7 . 6 . ~ } \ : S e i \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } \ : \ : e i n e \ : \ : R e i h e \ : \ : m i t \ : a _ { k } \geqslant 0 \quad \forall k \in \mathbf { N } ^ { * } . \ : D i e \ : R e i h e \ : \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } \ : \ : k o n v e r g e \ : \ : \sum _ { k = 1 } ^ { \infty } a _ { k } \ : \ : k o n v e r g e r: } } } \\ { { { e n a u \ : d a n n , \ : f a l l s \ : d i e \ : F o l g e \ : \ : ( S _ { n } ) _ { n \geqslant 1 } , \ : S _ { n } = \displaystyle \sum _ { k = 1 } ^ { n } a _ { k } \ : \ : d e r \ : P a r t i a l s u m m e n \ : n a c h \ : o b e n \ : b e s c h m m a _ { k } , } } } \end{array}
+$$
+
+BEweIS.
+
+$$
+S _ { n + 1 } - S _ { n } = \sum _ { k = 1 } ^ { n + 1 } a _ { k } - \sum _ { k = 1 } ^ { n } a _ { k } = a _ { n + 1 } \geqslant 0 .
+$$
+
+Also ist $\left( S _ { n } \right) _ { n \geqslant 1 }$ monoton wachsend.
+
+Falls $\left( S _ { n } \right) _ { n \geqslant 1 }$ nach oben beschrankt ist, folgt aus Weierstrass (Satz 2.2.2), dass die Folge konvergiert. Falls sie nicht nach oben beschrankt ist, kann sie nicht konvergieren.
+
+Wir erhalten folgendes sehr nutzliche Korollar:
+
+KOROLLAR 2.7.7 (Vergleichssatz). Seien $\sum _ { k = 1 } ^ { \infty } { a _ { k } } u n d \sum _ { k = 1 } ^ { \infty } { b _ { k } }$ Reihen mit:
+
+$$
+0 \leqslant a _ { k } \leqslant b _ { k } \qquad \forall k \geqslant 1 .
+$$
+
+Dann gelten:
+
+$$
+\begin{array} { c c l } { { \displaystyle \sum _ { k = 1 } ^ { \infty } b _ { k } } } & { { k o n v e r g e n t } } & { { \Longrightarrow } } & { { \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } \ k o n v e r g e n t } } \\ { { \displaystyle \sum _ { k = 1 } ^ { \infty } a _ { k } } } & { { d i v e r g e n t } } & { { \Longrightarrow } } & { { \displaystyle \sum _ { k = 1 } ^ { \infty } b _ { k } \ d i v e r g e n t } } \end{array}
+$$
+
+Die Implikationen treffen auch zu, wenn es $K \geqslant 1$ gibt, so dass
+
+$$
+0 \leqslant a _ { k } \leqslant b _ { k } \qquad \forall k \geqslant K .
+$$
+
+BEISpIEL 2.7.8. $\sum _ { k = 1 } ^ { \infty } { \frac { 1 } { k ^ { 2 } } }$ konvergiert. Sei ak $a _ { k } = \frac { 1 } { k ^ { 2 } }$ $b _ { k } = { \frac { 1 } { ( k - 1 ) k } }$ k >1. Dann gilt $0 \leqslant a _ { k } \leqslant b _ { k }$ $k \geqslant 2$ und
+
+$$
+\begin{array} { l } { \displaystyle \sum _ { k = 2 } ^ { n } b _ { k } = \sum _ { k = 2 } ^ { n } \left( \frac { 1 } { k - 1 } - \frac { 1 } { k } \right) = \left( 1 - \frac { 1 } { 2 } \right) + \left( \frac { 1 } { 2 } - \frac { 1 } { 3 } \right) + \dots + \left( \frac { 1 } { n - 1 } - \frac { 1 } { n } \right) } \\ { \displaystyle \qquad = 1 - \frac { 1 } { n } < 1 \qquad \forall n \geqslant 1 . } \end{array}
+$$
+
+Die Behauptung folgt dann aus dem Vergleichssatz.
+
+DEFINITION 2.7.9. Die Reihe $\sum _ { k = 1 } ^ { \infty } a _ { k }$ heisst absolut konvergent, falls
+
+$$
+\sum _ { k = 1 } ^ { \infty } \lvert a _ { k } \rvert
+$$
+
+konvergiert.
+
+Eine Anwendung des Cauchy Kriterium liefert:
+
+SATz 2.7.10. Eine absolut konvergente Reihe $\sum _ { k = 1 } ^ { \infty } a _ { k }$ ist auch konvergent und es gilt:
+
+$$
+\left| \sum _ { k = 1 } ^ { \infty } a _ { k } \right| \leqslant \sum _ { k = 1 } ^ { \infty } \bigl | a _ { k } \bigr |
+$$
+
+BEWeIS. Da $\sum _ { k = 1 } ^ { \infty } \left| a _ { k } \right|$ konvergiert, gilt nach Cauchy (Satz 2.7.5): $\forall \varepsilon > 0$ $\exists N \geqslant 1$ mit:
+
+$$
+\sum _ { k = n } ^ { m } \left| a _ { k } \right| < \varepsilon \qquad \forall m \geqslant n \geqslant N .
+$$
+
+Daraus folgt:
+
+$$
+\left| \sum _ { k = n } ^ { m } a _ { k } \right| \leqslant \sum _ { k = n } ^ { m } \left| a _ { k } \right| < \varepsilon
+$$
+
+woraus mit Satz 2.7.5 die Konvergenz von $\sum _ { k = 1 } ^ { \infty } a _ { k } \mathrm { f o l g t } .$
+
+$S _ { n } = \sum _ { k = 1 } ^ { n } a _ { k }$ n Seien jetzt und Un = |ak|. k=1
+
+Dann gilt
+
+$$
+\left| S _ { n } \right| = \left| \sum _ { k = 1 } ^ { n } a _ { k } \right| \leqslant \sum _ { k = 1 } ^ { n } \left| a _ { k } \right| = U _ { n }
+$$
+
+und folglich
+
+$$
+\left| \sum _ { k = 1 } ^ { \infty } a _ { k } \right| = \left| \operatorname* { l i m } _ { n \to \infty } S _ { n } \right| = \operatorname* { l i m } _ { n \to \infty } | S _ { n } | \leqslant \operatorname* { l i m } _ { n \to \infty } U _ { n } = \sum _ { k = 1 } ^ { \infty } | a _ { k } | ,
+$$
+
+wobei die Ungleichung aus Satz 2.1.8(4) folgt.
+
+BEISPIEL 2.7.11.
+
+$$
+\sum _ { k = 1 } ^ { \infty } ( - 1 ) ^ { k + 1 } { \frac { 1 } { k } } = 1 - { \frac { 1 } { 2 } } + { \frac { 1 } { 3 } } - { \frac { 1 } { 4 } } + \cdot \cdot \cdot
+$$
+
+konvergiert, ist aber nicht absolut konvergent.
+
+Dass die Reihe im Beispiel 2.7.11 konvergiert, ist ein Spezialfall eines allgemeinen Satzes:
+
+SATz 2.7.12 (Leibniz 1682). Sei $\left( a _ { n } \right) _ { n \geqslant 1 }$ monoton fallend mit $a _ { n } \geqslant 0 \forall n \geqslant 1$ und $\operatorname* { l i m } _ { n \to \infty } a _ { n } = 0$ . Dann konvergiert
+
+$$
+S : = \sum _ { k = 1 } ^ { \infty } { { { \left( { - 1 } \right) } ^ { k + 1 } } } { { { a } _ { k } } }
+$$
+
+und es gilt:
+
+$$
+a _ { 1 } - a _ { 2 } \leqslant S \leqslant a _ { 1 }
+$$
+
+BeweIS. Sei $S _ { n } = \sum _ { k = 1 } ^ { n } { { { \left( { - 1 } \right) } ^ { k + 1 } } } a _ { k }$ . Die Idee des Beweises lasst sich bildich wie folgt darstellen:
+
+![](images/2ecdcbed203611db9fdf28c3e6b69ca9e2e1cc416321c0f14d43c88827a39141.jpg)
+
+Sei also
+
+$$
+\begin{array} { c } { { S _ { 2 n + 1 } = \underbrace { a _ { 1 } - a _ { 2 } + \dots + a _ { 2 n - 1 } } _ { \displaystyle \sum _ { S _ { 2 n - 1 } } } - a _ { 2 n } + a _ { 2 n + 1 } } } \\ { { S _ { 2 n - 1 } } } \\ { { \qquad = S _ { 2 n - 1 } - ( a _ { 2 n } - a _ { 2 n + 1 } ) \leqslant S _ { 2 n - 1 } . } } \\ { { S _ { 2 n } = \underbrace { a _ { 1 } - a _ { 2 } + \dots + a _ { 2 n - 2 } } _ { \displaystyle \sum _ { S _ { 2 n - 2 } } } + a _ { 2 n - 1 } - a _ { 2 n } } } \\ { { S _ { 2 n - 2 } } } \\ { { \qquad = S _ { 2 n - 2 } + ( a _ { 2 n - 1 } - a _ { 2 n } ) \geqslant S _ { 2 n - 2 } . } } \end{array}
+$$
+
+Die Folge $\left( S _ { 2 n - 1 } \right) _ { n \geqslant 1 }$ ist also monoton fallend und $\left( S _ { 2 n } \right) _ { n \geqslant 1 }$ ist monoton wachsend Aus
+
+$$
+S _ { 2 n } = S _ { 2 n - 1 } - a _ { 2 n }
+$$
+
+folgt
+
+$$
+S _ { 2 } \leqslant S _ { 2 n } \leqslant S _ { 2 n - 1 } \leqslant S _ { 1 } .
+$$
+
+Beide monotonen Folgen sind beschrankt, also existieren lim S2n und lim S2n-1-   
+Aus $\left( * \right)$ und lim a2n = 0 folgt n>00
+
+$$
+\operatorname* { l i m } _ { n  \infty } S _ { 2 n } = \operatorname* { l i m } _ { n  \infty } S _ { 2 n - 1 } .
+$$
+
+Daraus folgt, dass $\left( S _ { m } \right) _ { m \geqslant 1 }$ mit gleichem Grenzwert konvergiert.
+
+BeispiEL 2.7.13. Betrachten wir nochmals das Beispiel 2.7.11:
+
+$$
+{ \begin{array} { l } { \displaystyle { S = 1 - \frac { 1 } { 2 } + \frac { 1 } { 3 } - \frac { 1 } { 4 } + \frac { 1 } { 5 } - \frac { 1 } { 6 } + \cdots } } \\ { \displaystyle { \frac { 1 } { 2 } = 1 - \frac { 1 } { 2 } \leqslant S \leqslant 1 . } } \end{array} }
+$$
+
+Wir andern jetzt die Reihenfolge der Summanden wie folgt:
+
+$$
+\underbrace { \left( 1 - { \frac { 1 } { 2 } } \right) } _ { \frac { 1 } { 2 } } - { \frac { 1 } { 4 } } + \underbrace { \left( { \frac { 1 } { 3 } } - { \frac { 1 } { 6 } } \right) } _ { \frac { 1 } { 6 } } - { \frac { 1 } { 8 } } + \underbrace { \left( { \frac { 1 } { 5 } } - { \frac { 1 } { 1 0 } } \right) } _ { \frac { 1 } { 1 0 } } - { \frac { 1 } { 1 2 } } + \cdots
+$$
+
+und erhalten
+
+$$
+{ \frac { 1 } { 2 } } - { \frac { 1 } { 4 } } + { \frac { 1 } { 6 } } - { \frac { 1 } { 8 } } + { \frac { 1 } { 1 0 } } - { \frac { 1 } { 1 2 } } + \cdots = { \frac { 1 } { 2 } } \left( 1 - { \frac { 1 } { 2 } } + { \frac { 1 } { 3 } } - { \frac { 1 } { 5 } } + \cdots \right)
+$$
+
+Die umgeordnete Reihe konvergiert also mit Grenzwert ${ \frac { 1 } { 2 } } S$ -
+
+Riemann (1854) hat sogar gezeigt, dass es fur jede reelle Zahl $A \in \mathbf { R }$ eine Umordnung obiger Reihe gibt, die gegen $A$ konvergiert! (ubung).
+
+DeFINITIOn 2.7.14. Eine Reihe $\sum _ { n = 1 } ^ { \infty } a _ { n } ^ { \prime }$ ist eine Umordnung der Reihe $\sum _ { n = 1 } ^ { \infty } a _ { n }$ , falls es eine bijektive Abbildung
+
+$$
+\phi : \mathbf { N } ^ { * } \longrightarrow \mathbf { N } ^ { * }
+$$
+
+gibt, so dass
+
+$$
+a _ { n } ^ { \prime } = a _ { \phi ( n ) } .
+$$
+
+BEMERkunG 2.7.15. Aus Riemann folgt, dass es uiberabzahlbar viele Bijektionen von N\* gibt.
+
+SATz 2.7.16 (Dirichlet 1837). Falls $\sum _ { n = 1 } ^ { \infty } a _ { n }$ absolut konvergiert, dann konvergiert jede Umordnung der Reihe und hat denselben Grenzwert.
+
+Beweis. Wir wenden das Cauchy Kriterium auf die Reihe $\sum _ { n = 1 } ^ { \infty } \left| a _ { n } \right.$ an: $\forall \varepsilon > 0 \exists N \geqslant 1$ , so dass $\forall n \geqslant N$ und $k \geqslant 1$ ..
+
+$$
+| a _ { n + 1 } | + | a _ { n + 2 } | + \cdot \cdot \cdot + | a _ { n + k } | < \varepsilon .
+$$
+
+Sei $\phi : \mathbf { N } ^ { * } \longrightarrow \mathbf { N } ^ { * }$ eine Bijektion und
+
+$$
+S _ { m } ^ { \prime } = \sum _ { i = 1 } ^ { m } a _ { \phi ( i ) }
+$$
+
+die m-te Partialsumme der umgeordneten Reihe..
+
+Da $\phi$ surjektiv ist, konnen wir $M \geqslant N$ wahlen, so dass:
+
+$$
+\{ 1 , 2 , \ldots , N \} \subset \{ \phi ( 1 ) , \phi ( 2 ) , \ldots , \phi ( M ) \} .
+$$
+
+Dann folgt $\forall m \geqslant M$ .
+
+$$
+\{ 1 , 2 , \ldots , N \} \subset \{ \phi ( 1 ) , \phi ( 2 ) , \ldots , \phi ( m ) \}
+$$
+
+und
+
+$$
+\{ 1 , 2 , \ldots , N \} \subset \{ 1 , 2 , \ldots , m \} .
+$$
+
+Fur $k \geqslant 1$ , so dass $m \leqslant N + k$ und max{(1),...,\$(m)}  N + k folgt:
+
+$$
+| S _ { m } ^ { \prime } - S _ { m } | \leqslant | a _ { N + 1 } | + \cdots + | a _ { N + k } | < \varepsilon .
+$$
+
+Folglich gilt $\operatorname* { l i m } _ { n  \infty } ( S _ { m } ^ { \prime } - S _ { m } ) = 0$ und somit
+
+$$
+\operatorname* { l i m } _ { n \to \infty } S _ { m } ^ { \prime } = \operatorname* { l i m } _ { n \to \infty } S _ { m } + \operatorname* { l i m } _ { n \to \infty } \left( S _ { m } ^ { \prime } - S _ { m } \right) = \operatorname* { l i m } _ { n \to \infty } S _ { m }
+$$
+
+UBunG. Wo haben wir absolute Konvergenz benutzt?.
+
+Wir werden jetzt hinreichende Bedingungen fur absolute Konvergenz herleiten. Es handelt sich dabei um das Quotientenkriterium und das Wurzelkriterium. Beide benutzen den Vergleichssatz (Korollar 2.7.7) und die Konvergenzbedingung fur die geometrische Reihe (Beispiel 2.7.2).
+
+SATz 2.7.17 (Quotientenkriterium, Cauchy 1821). Sei $\left( a _ { n } \right) _ { n \geqslant 1 }$ mit $a _ { n } \neq 0 \forall n \geqslant 1$ . Falls $\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } | } { | a _ { n } | } } < 1$ dann konvergiert die Reihe $\sum _ { n = 1 } ^ { \infty } a _ { n }$ absolut. Falls $\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } | } { | a _ { n } | } } > 1$ divergiert die Reihe
+
+BeweIS. Sei
+
+$$
+c _ { n } = \operatorname* { s u p } \left\{ \frac { \left| a _ { k + 1 } \right| } { \left| a _ { k } \right| } : k \geqslant n \right\} .
+$$
+
+Die Annahme ist, dass
+
+$$
+\left\{ { \frac { \left| a _ { k + 1 } \right| } { \left| a _ { k } \right| } } : k \geqslant 1 \right\}
+$$
+
+beschrankt ist. Dann ist $\left( c _ { n } \right) _ { n \geqslant 1 }$ monoton fallend und
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \operatorname* { s u p } _ { | a _ { n } | } { \frac { | a _ { n + 1 } | } { | a _ { n } | } } = \operatorname* { l i m } _ { n \to \infty } c _ { n } .
+$$
+
+Sei $0 < q < 1$ mit:
+
+$$
+\operatorname* { l i m } _ { n \to \infty } c _ { n } < q < 1 .
+$$
+
+Sei $N \geqslant 1$ , so dass
+
+$$
+\begin{array} { r } { c _ { N } \leqslant q < 1 . } \end{array}
+$$
+
+Dann folgt $\forall k \geqslant N$ , dass
+
+$$
+{ \frac { | a _ { k + 1 } | } { | a _ { k } | } } \leqslant q
+$$
+
+woraus $| a _ { k + 1 } | \leqslant q | a _ { k } |$ folgt, und somit fur $j \geqslant 1$ ..
+
+$$
+\left| a _ { N + j } \right| \leqslant q { \left| a _ { N + j - 1 } \right| } \leqslant \cdots \leqslant q ^ { j } { \left| a _ { N } \right| } = q ^ { N + j } { \frac { \left| a _ { N } \right| } { q ^ { N } } } .
+$$
+
+Wir haben also gezeigt, dass $\forall n \geqslant N + 1$ ..
+
+$$
+\left| a _ { n } \right| \leqslant q ^ { n } { \frac { \left| a _ { N } \right| } { q ^ { N } } } .
+$$
+
+Die erste Aussage des Satzes folgt dann vom Vergleichssatz (2.7.7), angewendet auf die geometrische Reihe (2.7.2).
+
+Ein analoges Argument zeigt, dass wenn
+
+$$
+\operatorname* { l i m } _ { m \to \infty } { \frac { | a _ { m + 1 } | } { | a _ { m } | } } > 1
+$$
+
+die Folge $\left( \left| a _ { m } \right| \right) _ { m \geqslant 1 }$ unbeschrankt ist. Also konnen weder $\sum _ { m = 1 } ^ { \infty } a _ { m }$ noch $\sum _ { m = 1 } ^ { \infty } \left| a _ { m } \right|$ konvergieren.
+
+BeIspIEL 2.7.18 (Die Exponentialfunktion). Fur $z \in \mathbf { C }$ betrachte die Reihe
+
+$$
+1 + z + { \frac { z ^ { 2 } } { 2 ! } } + { \frac { z ^ { 3 } } { 3 ! } } + \cdot \cdot \cdot
+$$
+
+mit allgemeinem Glied
+
+$$
+a _ { n } = { \frac { z ^ { n } } { n ! } } .
+$$
+
+Dann folgt fur $z \neq 0$
+
+$$
+{ \frac { | a _ { n + 1 } | } { | a _ { n } | } } = \left| { \frac { z ^ { n + 1 } } { ( n + 1 ) ! } } { \frac { n ! } { z ^ { n } } } \right| = { \frac { | z | } { n + 1 } }
+$$
+
+Also gilt $\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } | } { | a _ { n } | } } = 0$ und die Reihe konvergiert fur alle $z \in \mathbf { C }$
+
+Wir definieren die Exponentialfunktion:
+
+$$
+\exp \left( z \right) : = 1 + z + { \frac { z ^ { 2 } } { 2 ! } } + { \frac { z ^ { 3 } } { 3 ! } } + \cdot \cdot \cdot
+$$
+
+BEMERkunG 2.7.19. Das Quotientenkriterium versagt, wenn zum Beispiel unendlich viele Glieder $\boldsymbol { a } _ { n }$ der Reihe verschwinden.
+
+SATz 2.7.20 (Wurzelkriterium, Cauchy 1821).
+
+(1) Falls
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \sqrt [ { n } ] { | a _ { n } | } } < 1
+$$
+
+dann konvergiert $\sum _ { n = 1 } ^ { \infty } a _ { n }$ absolut.
+
+(2) Falls
+
+$$
+\begin{array} { c } { { \displaystyle \operatorname* { l i m } _ { n \to \infty } \operatorname* { s u p } _ { 0 } ^ { n } \sqrt { \left| a _ { n } \right| } > 1 } } \\ { { \displaystyle \sum _ { = 1 } ^ { \infty } a _ { n } u n d \sum _ { n = 1 } ^ { \infty } \left| a _ { n } \right| . } } \end{array}
+$$
+
+BEWeIS. (1) S ${ \mathrm { ~ a i ~ } } \ c _ { n } : = \operatorname* { s u p } \left\{ { \sqrt [ k ] { \left| a _ { k } \right| } } : k \geqslant n \right\}$ und 0<q<1 mit
+
+$$
+\operatorname* { l i m } _ { n \to \infty } c _ { n } = \operatorname* { l i m } _ { n \to \infty } \operatorname* { s u p } _ { } \sqrt [ n ] { | a _ { n } | } < q < 1 .
+$$
+
+Dann gibt es $N \geqslant 1$ mit
+
+$$
+c _ { N } = \operatorname* { s u p } \Big \{ \sqrt [ k ] { | a _ { k } | } : k \geqslant N \Big \} \leqslant q ,
+$$
+
+woraus
+
+$$
+| a _ { k } | \leqslant q ^ { k } \qquad \forall k \geqslant N
+$$
+
+folgt. Die Aussage folgt dann aus dem Vergleichssatz (2.7.7), angewendet auf die geometrische Reihe (2.7.2).
+
+(2) Ein analoges Argument zeigt, dass $\left| a _ { n } \right| \geqslant 1$ fur unendlich viele $n$ , falls
+
+$$
+\operatorname* { l i m } \operatorname* { s u p } { \sqrt [ n ] { | a _ { n } | } } > 1 .
+$$
+
+Eine wichtige Klasse von Funktionen in der Analysis wird durch konvergente Potenzreihen' definiert.
+
+Sei $\left( c _ { k } \right) _ { k \geqslant 0 }$ eine Folge (in $\mathbf { R }$ oder $\mathbf { C }$ ). Falls lim sup $\sqrt [ k ] { \left| c _ { k } \right| }$ existiert, definieren wir k>00
+
+$$
+\rho = { \{ \begin{array} { l l } { + \infty } & { { \mathrm { f a l l s ~ } } \operatorname* { l i m } _ { k  \infty } { \sqrt [ { k } ] { | c _ { k } | } } = 0 } \\ { \displaystyle { \frac { 1 } { \operatorname* { l i m } _ { k  \infty } { \sqrt [ { k } ] { | c _ { k } | } } } } } & { { \mathrm { f a l l s ~ } } \operatorname* { l i m s u p } _ { k  \infty } { \sqrt [ { k } ] { | c _ { k } | } } > 0 } \end{array}  }
+$$
+
+KOROLLAR 2.7.21. Die Potenzreihe
+
+$$
+\sum _ { k = 0 } ^ { \infty } c _ { k } z ^ { k }
+$$
+
+konvergiert absolut fir alle $| z | < \rho$ und divergiert fir alle $| z | > \rho$ -.
+
+BeweIS. Sei $a _ { n } : = c _ { n } z ^ { n }$ . Dann ist ${ \sqrt [ n ] { | a _ { n } | } } = { \sqrt [ n ] { | c _ { n } | } } | z |$ . Also:
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \operatorname* { s u p } _ { } { \sqrt [ n ] { \left| a _ { n } \right| } } = \operatorname* { l i m } _ { n \to \infty } \operatorname* { s u p } _ { } ^ { n } { \sqrt { \left| c _ { n } \right| } } | z |
+$$
+
+und die Aussage folgt aus dem Wurzelkriterium (Satz 2.7.20).
+
+Die Zeta Funktion. Sei $s > 1$ und
+
+$$
+\zeta ( s ) = \sum _ { n = 1 } ^ { \infty } { \frac { 1 } { n ^ { s } } }
+$$
+
+Wir wissen zum Beispiel, dass
+
+$$
+\sum _ { n = 1 } ^ { \infty } { \frac { 1 } { n ^ { 2 } } }
+$$
+
+konvergiert.
+
+- Quotientenkriterium: ${ \frac { n ^ { 2 } } { ( n + 1 ) ^ { 2 } } } = \left( { \frac { n } { n + 1 } } \right) ^ { 2 } \longrightarrow 1$ -Wurzelkriterium: $\sqrt [ n ] { n ^ { 2 } } ^ { - 1 } = \left( \sqrt [ n ] { n } \right) ^ { - 2 } \longrightarrow 1$ (siehe Beispiel 2.2.5).
+
+Weder Quotientenkriterium noch Wurzelkriterium erlauben auf die Konvergenz von $^ { ( * ) }$ zu schliessen.
+
+Behauptung: fur $s > 1$ konvergiert die obige Reihe.
+
+$$
+\begin{array} { r l } & { S _ { 2 ^ { k } } = 1 + \cfrac { 1 } { 2 ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { 6 ^ { s } } + \cfrac { 1 } { \overline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \cfrac { 1 } { \underline { { \mathfrak { I } } } ^ { s } } + \dots + \cfrac { 1 } { 1 6 ^ { s } } + \dots } \\ & { \qquad \leqslant \frac { 2 } { 2 ^ { s } } } \\ & { \qquad + 1 + \cfrac { 1 } { 2 ^ { s } } + \cfrac { 1 } { 2 ^ { s - 1 } } + \cfrac { 1 } { 4 ^ { s - 1 } } + \cfrac { 1 } { 8 ^ { s - 1 } } + \dots } \\ & { \qquad = 1 + \cfrac { 1 } { 2 ^ { s } } + \cfrac { 1 } { 2 ^ { s - 1 } } + \cfrac { 1 } { \left( 2 ^ { s - 1 } \right) ^ { 2 } } + \cfrac { 1 } { \left( 2 ^ { s - 1 } \right) ^ { 3 } } + \dots } \end{array}
+$$
+
+Da $s - 1 > 0$ folgt $2 ^ { s - 1 } > 1$ und
+
+$$
+{ \frac { 1 } { 2 ^ { s - 1 } } } < 1 .
+$$
+
+Die Konvergenz folgt dann vom Vergleichssatz (2.7.7), angewendet auf die geometrisch Reihe (2.7.2).
+
+Doppelte Summation. Betrachten wir:
+
+$$
+{ \begin{array} { l l l l l l l l } { a _ { 0 0 } } & { + } & { a _ { 0 1 } } & { + } & { a _ { 0 2 } } & { + } & { \cdots } & { = } & { S _ { 0 } } \\ & { ~ + } & { ~ + } & { ~ \cdot } & { ~ \cdot } & { ~ \cdot } & { ~ \cdot } \\ { a _ { 1 0 } } & { + } & { a _ { 1 1 } } & { + } & { a _ { 1 2 } } & { + } & { \cdots } & { = } & { S _ { 1 } } \\ { ~ + } & { ~ + } & { ~ \cdot } & { ~ + } & { ~ \cdot } & { ~ \cdot } & { ~ \cdot } \\ { a _ { 2 0 } } & { + } & { a _ { 2 1 } } & { + } & { a _ { 2 2 } } & { + } & { \cdots } & { = } & { S _ { 2 } } \\ { ~ + } & { ~ + } & { ~ + } & { ~ + } & { ~ \cdot } & { ~ \cdot } & { ~ \cdot } \\ { ~ \vdots } & { ~ \vdots } & { ~ \vdots } & & & { ~ \vdots } \\ { = } & { ~ - } & { ~ \vdots } & { ~ \vdots } & & & { ~ \cdot } \\ { b _ { 0 } } & { + } & { b _ { 1 } } & { + } & { b _ { 2 } } & { + } & { \cdots } & { = } & { { \mathfrak { T } } { \mathfrak { T } } } \end{array} }
+$$
+
+BEISPIEL.
+
+$$
+{ \begin{array} { l l l l l l l l l } { 1 } & { - } & { 1 } & { + } & { 0 } & { + } & { 0 } & { + } & { \cdots } & { = } & { 0 } \\ { + } & { ~ + } & { ~ + } & { ~ + } & { ~ + } & { ~ } & { ~ } & { ~ + } \\ { 0 } & { + } & { 1 } & { - } & { 1 } & { + } & { ~ 0 } & { + } & { \cdots } & { = } & { ~ 0 } \\ { + } & { ~ + } & { ~ + } & { ~ + } & { ~ + } & { ~ } & { ~ } & { ~ + } & { ~ } \\ { 0 } & { + } & { 0 } & { + } & { 1 } & { - } & { 1 } & { + } & { \cdots } & { = } & { ~ 0 } \\ { + } & { ~ + } & { ~ + } & { ~ + } & { ~ } & { + } & { ~ } & { ~ } & { ~ + } & { ~ } \\ { \vdots } & { ~ \vdots } & { ~ \vdots } & { ~ \vdots } & { ~ \vdots } & { ~ } & { ~ \vdots } & { ~ } \\ { = } & { ~ = } & { ~ = } & { ~ 0 } & { = } & { ~ } & { ~ } & { ~ = 0 } \\ { ~ 1 } & { + } & { ~ 0 } & { + } & { ~ 0 } & { + } & { \cdots } & { ~ - 1 } & { \left[ ~ { \frac { \displaystyle 1 } { \displaystyle { \mathcal { F } } } } \right] } \end{array} }
+$$
+
+Gegeben eine Doppelfolge $\left( a _ { i j } \right) _ { i , j \geqslant 0 }$ . Dann konnen
+
+$$
+\sum _ { i = 0 } ^ { \infty } \left( \sum _ { j = 0 } ^ { \infty } a _ { i j } \right) = S _ { 0 } + S _ { 1 } + S _ { 2 } + \cdot \cdot \cdot
+$$
+
+und
+
+$$
+\sum _ { j = 0 } ^ { \infty } \left( \sum _ { i = 0 } ^ { \infty } a _ { i j } \right) = b _ { 0 } + b _ { 1 } + b _ { 2 } + \cdot \cdot \cdot
+$$
+
+beide konvergent sein mit verschiedenen Grenzwerten.   
+Wir nennen $\sum _ { i , j \geqslant 0 } a _ { i j }$ eine Doppelreihe.
+
+DEFINITION 2.7.22. $\sum _ { k = 0 } ^ { \infty } b _ { k }$ ist eine lineare Anordnung der Doppelreihe $\sum _ { i , j \geqslant 0 } a _ { i j } ,$ falls es eine Bijektion $\sigma : \bf N \longrightarrow \bf N \times \bf N$ gibt, mit $b _ { k } = a _ { \sigma ( k ) }$ -:
+
+SATz 2.7.23 (Cauchy 1821). Wir nehmen an, dass es $B \geqslant 0$ gibt, so dass
+
+$$
+\sum _ { i = 0 } ^ { m } \sum _ { j = 0 } ^ { m } \lvert a _ { i j } \rvert \leqslant B \qquad \forall m \geqslant 0 .
+$$
+
+Dann konvergieren die folgenden Reihen absolut:
+
+$$
+S _ { i } : = \sum _ { j = 0 } ^ { \infty } a _ { i j } \qquad \forall i \geqslant 0 \quad u n d \quad U _ { j } : = \sum _ { i = 0 } ^ { \infty } a _ { i j } \qquad \forall j \geqslant 0
+$$
+
+sowie
+
+$$
+\sum _ { i = 0 } ^ { \infty } S _ { i } u n d \sum _ { j = 0 } ^ { \infty } U _ { j }
+$$
+
+und es gilt:
+
+$$
+\sum _ { i = 0 } ^ { \infty } S _ { i } = \sum _ { j = 0 } ^ { \infty } U _ { j }
+$$
+
+Zudem konvergiert jede lineare Anordnung der Doppelreihe absolut, mit selbem Grenzwert.
+
+BeweIS. Sei $b _ { 0 } + b _ { 1 } + b _ { 2 } + \cdot \cdot \cdot$ eine lineare Anordnung der obigen Doppelreihe. Fur. jedes $n \geqslant 0$ gibt es $m \geqslant 0$ , so dass:
+
+$$
+\left\{ b _ { 0 } , \dots , b _ { n } \right\} \subset \left\{ a _ { i j } : \begin{array} { l } { { 0 \leqslant i \leqslant m } } \\ { { 0 \leqslant j \leqslant m } } \end{array} \right\}
+$$
+
+woraus
+
+$$
+\sum _ { i = 0 } ^ { n } \lvert b _ { i } \rvert \leqslant \sum _ { i = 0 } ^ { m } \sum _ { j = 0 } ^ { m } \lvert a _ { i j } \rvert \leqslant B
+$$
+
+folgt. Daraus folgt, dass die Reihe $\sum _ { i = 0 } ^ { \infty } b _ { i }$ absolut konvergiert.
+
+Dasselbe Argument liefert auch, dass die Reihen
+
+$$
+S _ { i } : = \sum _ { j = 0 } ^ { \infty } a _ { i j } \quad { \mathrm { ~ u n d ~ } } \quad U _ { j } : = \sum _ { i = 0 } ^ { \infty } a _ { i j }
+$$
+
+absolut konvergieren.
+
+Wir wenden jetzt das Cauchy Kriterium an auf die absolut konvergente Reihe $\sum _ { i = 0 } ^ { \infty } b _ { i } :$
+
+Ve>0 3N>0 Vn>N Vk>1:
+
+$$
+| b _ { n + 1 } | + \cdot \cdot \cdot + | b _ { n + k } | < \varepsilon .
+$$
+
+Fur ein gegebenes $\varepsilon > 0$ und entsprechendes $N \geqslant 0$ wahlen wir ein $M \geqslant 0$ , so dass alle
+
+$$
+b _ { 0 } , b _ { 1 } , \dotsc , b _ { N }
+$$
+
+im "Quadranten"
+
+$$
+a _ { i j } , 0 \leqslant i \leqslant M , 0 \leqslant j \leqslant M
+$$
+
+vorkommen:
+
+![](images/67d57c028d4491307bee34fa0fd9062e2921a5ab76e11888b4b2122d3de1628d.jpg)
+
+Mit dieser Wahl sind die Terme
+
+$$
+b _ { 0 } , \dots , b _ { N }
+$$
+
+prasent in der Summe
+
+$$
+\sum _ { i = 0 } ^ { l } b _ { i } \quad \mathrm { f i r } \quad l \geqslant N ,
+$$
+
+sowie in
+
+$$
+\sum _ { i = 0 } ^ { m } \sum _ { j = 0 } ^ { n } a _ { i j } \quad { \mathrm { f i r } } \quad m \geqslant M , n \geqslant M .
+$$
+
+Es folgt:
+
+$$
+\left| \sum _ { i = 0 } ^ { m } \sum _ { j = 0 } ^ { n } a _ { i j } - \sum _ { i = 0 } ^ { l } b _ { i } \right| \leqslant \left| b _ { N + 1 } \right| + \cdot \cdot \cdot + \left| b _ { N + k } \right| < \varepsilon
+$$
+
+fur ein genugend grosses $k \geqslant 1$
+
+Daraus folgt mit $S : = \sum _ { i = 0 } ^ { \infty } b _ { i } !$ --
+
+sowie
+
+$$
+\begin{array} { l } { \displaystyle \left. \sum _ { i = 0 } ^ { m } S _ { i } - S \right. < \varepsilon } \\ { \displaystyle \left. \sum _ { j = 0 } ^ { n } U _ { j } - S \right. < \varepsilon } \end{array}
+$$
+
+woraus
+
+$$
+\sum _ { i = 0 } ^ { \infty } S _ { i } = S = \sum _ { j = 0 } ^ { \infty } U _ { j }
+$$
+
+folgt.
+
+Wir konnen jetzt das Cauchy Produkt zweier Reihen behandeln. Falls wir das Produkt von
+
+$$
+\sum _ { i = 0 } ^ { \infty } a _ { i } \quad { \mathrm { m i t } } \quad \sum _ { j = 0 } ^ { \infty } b _ { j }
+$$
+
+berechnen wollen, mussen wir eine Art finden, die Eintrage der Matrix
+
+$$
+\begin{array} { c c c c c } { { a _ { 0 } b _ { 0 } } } & { { a _ { 0 } b _ { 1 } } } & { { a _ { 0 } b _ { 2 } } } & { { a _ { 0 } b _ { 3 } } } & { { \ldots } } \\ { { a _ { 1 } b _ { 0 } } } & { { a _ { 1 } b _ { 1 } } } & { { a _ { 1 } b _ { 2 } } } & { { a _ { 1 } b _ { 3 } } } & { { \ldots } } \\ { { a _ { 2 } b _ { 0 } } } & { { a _ { 2 } b _ { 1 } } } & { { a _ { 2 } b _ { 2 } } } & { { a _ { 2 } b _ { 3 } } } & { { \ldots } } \\ { { a _ { 3 } b _ { 0 } } } & { { a _ { 3 } b _ { 1 } } } & { { \ddots } } & { { } } & { { } } \\ { { \vdots } } & { { \vdots } } & { { } } & { { \ddots } } & { { } } \end{array}
+$$
+
+zu summieren.
+
+DeFINITIon 2.7.24. Das Cauchy Produkt der Reihen
+
+$$
+\sum _ { i = 0 } ^ { \infty } a _ { i } , \sum _ { j = 0 } ^ { \infty } b _ { j }
+$$
+
+ist die Reihe
+
+$$
+\sum _ { n = 0 } ^ { \infty } \left( \sum _ { j = 0 } ^ { n } a _ { n - j } b _ { j } \right) = a _ { 0 } b _ { 0 } + ( a _ { 0 } b _ { 1 } + a _ { 1 } b _ { 0 } ) + ( a _ { 0 } b _ { 2 } + a _ { 1 } b _ { 1 } + a _ { 2 } b _ { 0 } ) + \cdot \cdot \cdot
+$$
+
+UBunG 2.7.25. Zeige, dass das Cauchy Produkt der Reihe
+
+$$
+1 - { \frac { 1 } { \sqrt { 2 } } } + { \frac { 1 } { \sqrt { 3 } } } - { \frac { 1 } { \sqrt { 4 } } } + \cdot \cdot \cdot
+$$
+
+mit sich selbst divergiert.
+
+Losungsskizze:
+
+$$
+a _ { n } = { \frac { ( - 1 ) ^ { n } } { \sqrt { n + 1 } } }
+$$
+
+$$
+\left| \sum _ { j = 0 } ^ { n } a _ { n - j } a _ { j } \right| = \left| \sum _ { j = 0 } ^ { n } { \frac { \left( - 1 \right) ^ { n - j } \left( - 1 \right) ^ { j } } { \sqrt { n - j + 1 } { \sqrt { j + 1 } } } } \right| = \sum _ { j = 0 } ^ { n } { \frac { 1 } { \sqrt { { \big ( } n - j + 1 { \big ) } ( j + 1 { \big ) } } } }
+$$
+
+Da
+
+$$
+( n + 1 - j ) ( j + 1 ) \leqslant \left( n + 1 \right) ^ { 2 }
+$$
+
+folgt
+
+$$
+\sum _ { j = 0 } ^ { n } { \frac { 1 } { \sqrt { ( n + 1 - j ) ( j + 1 ) } } } \geqslant { \frac { n + 1 } { n + 1 } } = 1 .
+$$
+
+SATz 2.7.26. Falls die Reihen
+
+$$
+\sum _ { i = 0 } ^ { \infty } a _ { i } \ : , \quad \sum _ { j = 0 } ^ { \infty } b _ { j }
+$$
+
+absolut konvergieren, so konvergiert ihr Cauchy Produkt und es gilt.
+
+$$
+\sum _ { n = 0 } ^ { \infty } \left( \sum _ { j = 0 } ^ { n } a _ { n - j } b _ { j } \right) = \left( \sum _ { i = 0 } ^ { \infty } a _ { i } \right) \left( \sum _ { j = 0 } ^ { \infty } b _ { j } \right)
+$$
+
+Beweis. Direkte Anwendung von Satz 2.7.23.
+
+ANWENDUNG 2.7.27.
+
+$$
+\forall z , w \in \mathbf { C } : \exp ( w + z ) = \exp ( w ) \exp ( z )
+$$
+
+Wir berechnen das Cauchy Produkt der Reihen:
+
+$$
+\sum _ { i = 0 } ^ { \infty } \frac { w ^ { i } } { i ! } , \quad \sum _ { j = 0 } ^ { \infty } \frac { z ^ { j } } { j ! }
+$$
+
+Dies ist:
+
+$$
+\sum _ { n = 0 } ^ { \infty } \left( \sum _ { j = 0 } ^ { n } \frac { w ^ { n - j } } { ( n - j ) ! } \frac { z ^ { j } } { j ! } \right)
+$$
+
+Nun ist
+
+$$
+\sum _ { j = 0 } ^ { n } { \frac { w ^ { n - j } } { ( n - j ) ! } } { \frac { z ^ { j } } { j ! } } = { \frac { 1 } { n ! } } \sum _ { j = 0 } ^ { n } { \binom { n } { j } } w ^ { n - j } z ^ { j } = { \frac { ( w + z ) ^ { n } } { n ! } }
+$$
+
+woraus die Behauptung folgt.
+
+Zum Abschluss behandeln wir noch das Problem, ob man Summation und Limes vertauschen kann. In diesem Zusammenhang wird es nutzlich sein, eine Folge in $\mathbf { R }$ als eine Funktion
+
+$$
+f : \mathbf { N } \longrightarrow \mathbf { R }
+$$
+
+aufzufassen.
+
+SATZ 2.7.28. Sei $f _ { n } : \mathbf { N } \longrightarrow \mathbf { R }$ eine Folge. Wir nehmen an, dass: (1) $f ( j ) : = \operatorname* { l i m } _ { n \to \infty } f _ { n } ( j )$ existiert $\forall j \in \mathbf { N }$ - (2) Es gibt eine Funktion $g : \mathbf { N } \longrightarrow [ 0 , \infty [$ , so dass 2.1|fn(j)|<g(j) $\forall j \geqslant 0 , \forall n \geqslant 0$ -. 0 2.2 g(j) konvergiert. j=0
+
+Dann folgt:
+
+$$
+\sum _ { j = 0 } ^ { \infty } f ( j ) = \operatorname* { l i m } _ { n \to \infty } \sum _ { j = 0 } ^ { \infty } f _ { n } ( j ) .
+$$
+
+KOROLLAR 2.7.29. Fur jedes $z \in \mathbf { C }$ konvergiert die Folge $\left( \left( 1 + { \frac { z } { n } } \right) ^ { n } \right) _ { n \geq 1 }$ und
+
+$$
+\operatorname* { l i m } _ { n  \infty } ( 1 + { \frac { z } { n } } ) ^ { n } = \exp ( z ) .
+$$
+
+BEWeIS.
+
+$$
+{ \begin{array} { r l } { \displaystyle \left( 1 + { \frac { z } { n } } \right) ^ { n } = \sum _ { k = 0 } ^ { n } { \binom { n } { k } } 1 ^ { n - k } \left( { \frac { z } { n } } \right) ^ { k } = \sum _ { k = 0 } ^ { n } { \frac { n ! } { k ! ( n - k ) ! } } { \frac { 1 } { n ^ { k } } } z ^ { k } } & { } \\ { = \displaystyle \sum _ { k = 0 } ^ { n } { \frac { z ^ { k } } { k ! } } { \frac { n ! } { ( n - k ) ! n ^ { k } } } } & { } \end{array} }
+$$
+
+Nun ist
+
+$$
+{ \frac { n ! } { ( n - k ) ! n ^ { k } } } = { \frac { n ( n - 1 ) \cdot \cdot \cdot ( n - k + 1 ) } { n ^ { k } } } = 1 \left( 1 - { \frac { 1 } { n } } \right) \left( 1 - { \frac { 2 } { n } } \right) \cdot \cdot \cdot \left( 1 - { \frac { k - 1 } { n } } \right) .
+$$
+
+Sei also:
+
+$$
+f _ { n } ( k ) = \left\{ \begin{array} { l l } { \displaystyle \frac { z ^ { k } } { k ! } \frac { n ! } { ( n - k ) ! n ^ { k } } \quad } & { 0 \leqslant k \leqslant n } \\ { \displaystyle 0 \quad } & { k \geqslant n + 1 . } \end{array} \right.
+$$
+
+Fur jedes $k \geqslant 0$ folgt aus $^ { ( * ) }$
+
+$$
+\operatorname* { l i m } _ { n \to \infty } f _ { n } ( k ) = \frac { z ^ { k } } { k ! } = f ( k ) .
+$$
+
+Zudem:
+
+$$
+| f _ { n } ( k ) | \leqslant \frac { | z | ^ { k } } { k ! } = g ( k )
+$$
+
+Und wir hatten schon gezeigt, dass
+
+$$
+\sum _ { k = 0 } ^ { \infty } g ( k ) = \sum _ { k = 0 } ^ { \infty } { \frac { | z | ^ { k } } { k ! } }
+$$
+
+konvergiert. Das Korollar folgt dann aus Satz 2.7.28.
+
+Aus Korollar 2.7.29 und Beispiel 2.2.6 folgen
+
+$$
+\exp ( 1 ) = e { \mathrm { ~ ~ u n d ~ } } \exp ( n ) = \exp ( 1 + \cdot \cdot \cdot + 1 ) = \exp ( 1 ) ^ { n } = e ^ { n }
+$$
+
+fur alle $n \in \mathbf { N }$ . Deswegen werden wir oft fur $\exp ( z )$ die Notation $e ^ { z }$ verwenden.
