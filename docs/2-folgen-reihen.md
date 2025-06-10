@@ -909,7 +909,6 @@ $$
 \mathcal{L}(I) = b - a < d - c = \mathcal{L}(J).
 $$
 
-![Visualisierung zweier Intervalle](images/8114b034ec32e9e6c7db8f34a839fea4d8206e641bebe91d4974a40a458a256e.jpg)
 :::
 
 Ein monoton fallende Folge von Teilmengen von $\mathbb{R}$ ist eine Folge $(X_n)_{n\ge1}$ mit $X_{n+1} \subset X_n$ für alle $n \ge 1$. Betrachten wir zwei Beispiele:
