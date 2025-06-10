@@ -170,43 +170,39 @@ Wir betrachten jetzt einige Folgerungen obiger Axiome:
 
 (2)
 $$
-\begin{aligned}
-0 + 0 &= 0 && (A2)\\
+\begin{align*}
+\tag{A2} 0 + 0 &= 0\\
 (0 + 0)\cdot x &= 0 \cdot x  \forall\,x \in \mathbb{R}\\
-\underbrace{0\cdot x + 0\cdot x}_{(0 + 0)\cdot x} &= 0 \cdot x && (D)\\
+\tag{D}\underbrace{0\cdot x + 0\cdot x}_{(0 + 0)\cdot x} &= 0 \cdot x\\
 \underbrace{(0\cdot x + 0\cdot x)}_{(0 + 0)\cdot x} + \bigl(-\,0\cdot x\bigr)
-&= 0\cdot x + \bigl(-\,0\cdot x\bigr) \;=\; 0 \phantom{\,} && (A3)\\
-0\cdot x \;+\; \underbrace{\bigl(0\cdot x + (-\,0\cdot x)\bigr)}_{=\,0}
-&= 0 && (A1)\\
-0\cdot x + 0 &= 0 && (A3)\\
-0\cdot x &= 0 && (A2)
-\end{aligned}
+\tag{A3} &= 0\cdot x + \bigl(-\,0\cdot x\bigr) \;=\; 0 \phantom{\,}\\
+\tag{A1} 0\cdot x \;+\; \underbrace{\bigl(0\cdot x + (-\,0\cdot x)\bigr)}_{=\,0}
+&= 0\\
+\tag{A3} 0\cdot x + 0 &= 0\\
+\tag{A2} 0\cdot x &= 0
+\end{align*}
 \$$
 
 (3)
 
 $$
-\begin{aligned}
-x + (-1)\cdot x
-&= 1 \cdot x + (-1)\cdot x
-= (1 + (-1))\cdot x
-&& (D)\\
-&= 0 \cdot x = 0
-&& (2)\\[1ex]
+\begin{align*}
+\tag{D}x + (-1)\cdot x &= 1 \cdot x + (-1)\cdot x = (1 + (-1))\cdot x \\
+\tag{2} &= 0 \cdot x = 0
+\\[1ex]
 x + (-1)\cdot x &= 0
 \;\Longrightarrow\; (-1)\cdot x = -x
-\end{aligned}
+\end{align*}
 $$
 
 (4)
 $$
-\begin{aligned}
-y \ge 0
+\begin{align*}
+\tag{K2}y \ge 0
 \;&\Longrightarrow\;
 \underbrace{y + (-y)}_{0} \;\ge\; 0 + (-y)
 &\Longleftrightarrow\; 0 \ge -y
-\qquad (K2)
-\end{aligned}
+\end{align*}
 $$
 
 (5)<br>
