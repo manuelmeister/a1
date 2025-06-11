@@ -23,6 +23,7 @@ features:
   - icon: 〜
     title: Kapitel 3
     details: Stetige Funktionen
+    link: /3-stetige-funktionen
   - icon: 𝑓'
     title: Kapitel 4
     details: Differenzierbare Funktionen

@@ -2,9 +2,9 @@
 prev:
     text: Reelle und komplexe Zahlen
     link: /1-reelle-komplexe-zahlen
-#next:
-#    text: Number Theory
-#    link: /4-number-theory
+next:
+    text: Stetige Funktionen
+    link: /3-stetige-funktionen
 ---
 
 # <small>Kapitel 2:</small><br> Folgen und Reihen
