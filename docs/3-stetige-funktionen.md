@@ -2,9 +2,9 @@
 prev:
     text: Folgen und Reihen
     link: /2-folgen-reihen
-#next:
-#    text: Number Theory
-#    link: /4-number-theory
+next:
+    text: Differenzierbare Funktionen
+    link: /4-differenzierbar
 ---
 
 # <small>Kapitel 3:</small><br> Stetige Funktionen

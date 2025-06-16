@@ -183,13 +183,17 @@ sup.footnote-ref {
     counter-reset: numlist;
     padding-left: 1.5rem;
 
+    ol {
+        counter-reset: numlist;
+    }
+
     li {
         counter-increment: numlist;
         font-variant-numeric: tabular-nums;
     }
 
     ::marker {
-        content: "(" counter(numlist, decimal) ")  ";
+        content: "(" counters(numlist, '.', decimal) ")  ";
         font-variant-numeric: tabular-nums;
     }
 }

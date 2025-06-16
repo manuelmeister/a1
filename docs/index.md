@@ -27,6 +27,7 @@ features:
   - icon: 𝑓'
     title: Kapitel 4
     details: Differenzierbare Funktionen
+    link: /4-differenzierbar
   - icon: ∫
     title: Kapitel 5
     details: Das Riemann-Integral

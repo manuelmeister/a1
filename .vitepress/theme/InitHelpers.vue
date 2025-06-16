@@ -1,11 +1,10 @@
 <script lang="ts">
-import {onMounted, onUnmounted, ref} from "vue";
+import {onBeforeUnmount, onMounted, onUnmounted, ref} from "vue";
 import {onContentUpdated} from "vitepress";
 
 export default {
   name: "InitHelpers",
   setup() {
-    const tooltip = ref(null);
     const observer = ref(null);
 
     onMounted(() => {
@@ -35,6 +34,7 @@ export default {
     onContentUpdated(() => {
       if (observer.value) {
         // Observe each headline
+        observer.value.disconnect();
         document.querySelectorAll('h1,h2,h3,h4,h5,h6,.custom-block').forEach((headline) => {
           if (headline.id) {
             observer.value.observe(headline);
@@ -43,14 +43,7 @@ export default {
       }
     })
 
-    onUnmounted(() => {
-      if (tooltip.value) {
-        if (Array.isArray(tooltip.value)) {
-          tooltip.value.forEach((t) => t.destroy());
-        } else {
-          tooltip.value.destroy();
-        }
-      }
+    onBeforeUnmount(() => {
       observer.value.disconnect();
       observer.value = null;
     });
