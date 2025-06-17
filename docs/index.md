@@ -31,4 +31,5 @@ features:
   - icon: ∫
     title: Kapitel 5
     details: Das Riemann-Integral
+    link: /5-integral
 ---

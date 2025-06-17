@@ -2,9 +2,9 @@
 prev:
     text: Stetige Funktionen
     link: /3-stetige-funktionen
-#next:
-#    text: Number Theory
-#    link: /4-number-theory
+next:
+    text: Riemann Integral
+    link: /5-integral
 ---
 
 # <small>Kapitel 4:</small><br> Differenzierbare Funktionen
@@ -1059,13 +1059,13 @@ $$
 Die Funktion $\operatorname { t a n h } : ℝ \to (- 1 , 1)$ ist bijektiv. Ihre Umkehrfunktion wird mit
 
 $$
-\operatorname { a r t a n h } : (- 1 , 1) \to ℝ
+\operatorname {arctanh} : (- 1 , 1) \to ℝ
 $$
 
 bezeichnet. Es gilt dann:
 
 $$
-\operatorname { a r t a n h } ^ { \prime } ( y ) = { \frac { 1 } { 1 - y ^ { 2 } } } \qquad \forall y \in \left( - 1 , 1 \right)
+\operatorname {arctanh} ^ { \prime } ( y ) = { \frac { 1 } { 1 - y ^ { 2 } } } \qquad \forall y \in \left( - 1 , 1 \right)
 $$
 :::
 
